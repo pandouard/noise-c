@@ -27,7 +27,9 @@
 #define _BSD_SOURCE 1
 #endif
 #ifdef __LEDGER_VAULT__
-#include <machine/endian.h>
+//#include <machine/endian.h>
+#define	__BIG_ENDIAN	4321
+#define __BYTE_ORDER __BIG_ENDIAN
 #else
 #include <endian.h>
 #endif
