@@ -45,7 +45,6 @@
 #endif
 #elif defined(__LEDGER_VAULT__)
 //#include <machine/endian.h>
-#error
 #define	__BIG_ENDIAN	4321
 #define __BYTE_ORDER __BIG_ENDIAN
 
