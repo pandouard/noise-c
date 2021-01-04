@@ -48,6 +48,10 @@
 // #define __BIG_ENDIAN 4321
 // #define __BYTE_ORDER __BIG_ENDIAN
 
+#if defined(NATIVE_TARGET)
+#error
+#endif
+
 #define __LITTLE_ENDIAN 1234
 #define __BYTE_ORDER __LITTLE_ENDIAN
 #else
