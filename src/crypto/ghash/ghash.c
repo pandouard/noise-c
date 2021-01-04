@@ -61,6 +61,7 @@ static uint64_t swapEndian(uint64_t x)
     #error BIG_ENDIAN
     return x;
 #else
+    #error LITTLE_ENDIAN
     return ((x >> 56) & 0x00000000000000FF) |
            ((x >> 40) & 0x000000000000FF00) |
            ((x >> 24) & 0x0000000000FF0000) |
