@@ -58,9 +58,9 @@
 
 static uint64_t swapEndian(uint64_t x)
 {
-#if __BYTE_ORDER == __BIG_ENDIAN    
+#if __BYTE_ORDER == __BIG_ENDIAN
     return x;
-#else    
+#else
     return ((x >> 56) & 0x00000000000000FF) |
            ((x >> 40) & 0x000000000000FF00) |
            ((x >> 24) & 0x0000000000FF0000) |
@@ -119,7 +119,6 @@ static void GF128_mul(uint64_t Y[2], const uint64_t H[2])
 static uint32_t swapEndian(uint32_t x)
 {
 #if __BYTE_ORDER == __BIG_ENDIAN
-    #error
     return x;
 #else
     return ((x >> 24) & 0x000000FF) |
