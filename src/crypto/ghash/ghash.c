@@ -46,7 +46,7 @@
 #elif defined(__LEDGER_VAULT__)
 //#include <machine/endian.h>
 #define BIG_ENDIAN 4321
-#define BYTE_ORDER BIG_ENDIAN
+#define __BYTE_ORDER __BIG_ENDIAN
 #else
 #include <endian.h>
 #endif
@@ -58,6 +58,7 @@
 static uint64_t swapEndian(uint64_t x)
 {
 #if __BYTE_ORDER == __BIG_ENDIAN
+    #error BIG_ENDIAN
     return x;
 #else
     return ((x >> 56) & 0x00000000000000FF) |
