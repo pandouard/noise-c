@@ -47,6 +47,7 @@
 //#include <machine/endian.h>
 #define BIG_ENDIAN 4321
 #define __BYTE_ORDER __BIG_ENDIAN
+#error LEDGER_VAULT
 #else
 #include <endian.h>
 #endif
